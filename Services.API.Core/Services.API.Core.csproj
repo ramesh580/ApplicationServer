@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Services.API.DataAccess\Services.API.DataAccess.csproj" />
+    <ProjectReference Include="..\Services.API.DataModel\Services.API.DataModel.csproj" />
+  </ItemGroup>
+
+</Project>

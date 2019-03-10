@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Services.API.DataAccess.deps.json
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Services.API.DataAccess.runtimeconfig.json
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Services.API.DataAccess.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Services.API.DataAccess.dll
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Services.API.DataAccess.pdb
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Services.API.DataModel.dll
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Services.API.DataModel.pdb
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\release\netcoreapp2.1\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\release\netcoreapp2.1\Services.API.DataAccess.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\release\netcoreapp2.1\Services.API.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\release\netcoreapp2.1\Services.API.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\release\netcoreapp2.1\Services.API.DataAccess.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\release\netcoreapp2.1\Services.API.DataAccess.csproj.CopyComplete
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\release\netcoreapp2.1\Services.API.DataAccess.dll
+C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\release\netcoreapp2.1\Services.API.DataAccess.pdb
