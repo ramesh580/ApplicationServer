@@ -13,6 +13,8 @@
     using Services.API.DataAccess.Repositories;
     using Swashbuckle.AspNetCore.Swagger;
     using System.Text;
+    using System.Web.Http;
+    using System.Web.Http.Cors;
 
     public class Startup
     {
@@ -22,10 +24,20 @@
         {
             Configuration = configuration;
         }
-        
+
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -40,8 +52,12 @@
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtIssuerOptions:Key"]))
                     };
                 });
+             
+
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<RedbexApplicationServerDatabaseInstancecadContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:RedbexDB"]));
+            services.AddDbContext<RedbexDBContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:RedbexDB"]));
 
             services.AddTransient<IUserManager, UserManager>();
             services.AddTransient<IUserRepository, UserRepository>();
@@ -59,11 +75,6 @@
                         Email = string.Empty,
                         Url = "http://www.redbex.com/"
                     },
-                    //License = new License
-                    //{
-                    //    Name = "Use under LICX",
-                    //    Url = "https://example.com/license"
-                    //}
                 });
             });
         }
@@ -75,6 +86,9 @@
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("MyPolicy");
+
 
             app.UseStaticFiles(); 
 

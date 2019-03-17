@@ -1,30 +1,33 @@
-﻿using System;
+﻿using Services.API.DataAccess.Repositories;
+using Services.API.DataModel.DataTransferObjects;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Services.API.DataAccess.Repositories;
-using Services.API.DataModel.DataTransferObjects;
 
 namespace Services.API.Core.UserManagement
 {
     public class UserManager : IUserManager
     {
-        private readonly IUserRepository _repository;
-        public UserManager(IUserRepository repository)
+        private IRepositoryWrapper _repository;
+         
+        public UserManager(IRepositoryWrapper repository)
         {
             this._repository = repository;
         }
 
         public DtoUser AuthenticateUser(DtoUser login)
-        {
-            DtoUser user = null; 
-            user = _repository.GetAllUsers().FirstOrDefault(ee => ee.UserName == login.UserName);
-            return user;
+        { 
+            return (from user in _repository.User.FindAll()
+                          select new DtoUser()
+                {
+                    UserName = user.UserName,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName
+                }).ToList().FirstOrDefault(ee => ee.UserName == login.UserName);   
         }
 
         public List<DtoUser> GetAllUsers()
         {
-            return _repository.GetAllUsers();
+            return _repository.User.GetAllUsers();
         }
     }
 }

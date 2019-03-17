@@ -1,8 +1,9 @@
 ﻿
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-namespace Services.API.Controllers
+ namespace Services.API.Controllers
 {
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Cors;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
     using Microsoft.IdentityModel.Tokens;
@@ -13,6 +14,7 @@ namespace Services.API.Controllers
     using System.Security.Claims;
     using System.Text;
 
+    [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
     public class LoginController : Controller
     {
@@ -38,6 +40,7 @@ namespace Services.API.Controllers
         [AllowAnonymous]
         [Route("login")]
         [HttpPost]
+        [EnableCors("MyPolicy")]
         public IActionResult Login([FromBody]DtoUser login)
         {
             IActionResult response = Unauthorized();

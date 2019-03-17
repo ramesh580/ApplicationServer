@@ -3,13 +3,13 @@
     using Microsoft.EntityFrameworkCore;
     using Services.API.DataAccess.Models;
 
-    public partial class RedbexApplicationServerDatabaseInstancecadContext : DbContext
+    public partial class RedbexDBContext : DbContext
     {
-        public RedbexApplicationServerDatabaseInstancecadContext()
+        public RedbexDBContext()
         {
         }
 
-        public RedbexApplicationServerDatabaseInstancecadContext(DbContextOptions<RedbexApplicationServerDatabaseInstancecadContext> options)
+        public RedbexDBContext(DbContextOptions<RedbexDBContext> options)
             : base(options)
         {
         }

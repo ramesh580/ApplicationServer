@@ -1,12 +1,14 @@
 ﻿namespace Services.API.Controllers
 {
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Cors;
     using Microsoft.AspNetCore.Mvc;
     using Services.API.Core.UserManagement;
     using Services.API.DataModel.DataTransferObjects;
     using System.Collections.Generic;
 
     [Authorize]
+    [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
     public class UserController : Controller
     {
@@ -18,6 +20,7 @@
         }
 
         // GET api/values
+        [EnableCors("MyPolicy")]
         [HttpGet("GetUsers")]
         public ActionResult<IEnumerable<DtoUser>> GetUsers()
         {

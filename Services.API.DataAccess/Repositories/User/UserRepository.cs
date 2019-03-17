@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Services.API.DataAccess.Models;
 using Services.API.DataModel.DataTransferObjects;
 
 namespace Services.API.DataAccess.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : RepositoryBase<Users>, IUserRepository
     {
 
-        private RedbexApplicationServerDatabaseInstancecadContext _context;
+        private RedbexDBContext _context;
 
-        public UserRepository(
-            RedbexApplicationServerDatabaseInstancecadContext context)
+        public UserRepository(RedbexDBContext repositoryContext)
+            : base(repositoryContext)
         {
-            this._context = context;
-        }
+            this._context = repositoryContext;
+        } 
 
         public List<DtoUser> GetAllUsers()
         {
