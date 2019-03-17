@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 using Services.API.DataAccess.Models;
 using Services.API.DataModel.DataTransferObjects;
 
@@ -11,11 +14,12 @@ namespace Services.API.DataAccess.Repositories
     {
 
         private RedbexDBContext _context;
-
+         
         public UserRepository(RedbexDBContext repositoryContext)
             : base(repositoryContext)
         {
             this._context = repositoryContext;
+
         } 
 
         public List<DtoUser> GetAllUsers()
