@@ -10,8 +10,5 @@ C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess
 C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\Debug\netcoreapp2.1\Services.API.DataAccess.runtimeconfig.json
 C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\Debug\netcoreapp2.1\Services.API.DataAccess.runtimeconfig.dev.json
 C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\Debug\netcoreapp2.1\Services.API.DataModel.dll
-C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\Debug\netcoreapp2.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\Debug\netcoreapp2.1\Services.API.DataModel.pdb
-C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\Debug\netcoreapp2.1\Microsoft.IdentityModel.Tokens.pdb
-C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\bin\Debug\netcoreapp2.1\Microsoft.IdentityModel.Tokens.xml
 C:\Users\Admin\Desktop\Web Development\ApplicationServer\Services.API.DataAccess\obj\Debug\netcoreapp2.1\Services.API.DataAccess.csproj.CopyComplete

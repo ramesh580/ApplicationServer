@@ -85,11 +85,13 @@
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+               // app.UseHsts();
             }
 
             app.UseCors("MyPolicy");
 
-
+            //app.UseHttpsRedirection();
+            app.UseCookiePolicy();
             app.UseStaticFiles(); 
 
             app.UseAuthentication();
