@@ -263,3 +263,4 @@ __pycache__/
 
 # obj folder
 **/obj/**
+.dockerignore

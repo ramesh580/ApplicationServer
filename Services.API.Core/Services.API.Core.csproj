@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Services.API.DataAccess\Services.API.DataAccess.csproj" />
     <ProjectReference Include="..\Services.API.DataModel\Services.API.DataModel.csproj" />
   </ItemGroup>

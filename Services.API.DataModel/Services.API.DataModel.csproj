@@ -10,4 +10,8 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DataTransferObjects\Auth\" />
+  </ItemGroup>
+
 </Project>
